@@ -395,7 +395,7 @@ class AddressWizard:
                     port = int(parts[1])
 
         try:
-            resolved = self.lookup_fn(address_str, port)
+            resolved = self.lookup_fn(address_str, int(port))
             logger.debug("Lookup result: %s", resolved)
         except Exception as exc:
             logger.debug("Exception trying to resolve hostname %s : %s",
